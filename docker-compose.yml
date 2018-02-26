@@ -1,0 +1,9 @@
+db:
+  image: mysql:5
+  command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0
+  environment:
+    MYSQL_ROOT_PASSWORD: "jjgo"
+    MYSQL_DATABASE: "aha"
+    TZ: "Asia/Seoul"
+  ports:
+    - "3306:3306"

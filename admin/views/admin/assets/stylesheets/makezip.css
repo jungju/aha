@@ -1,0 +1,49 @@
+[qor-icon-name*="사용자"]>a::before {
+    content: "\e7fd";
+}
+
+[qor-icon-name*="매물"]>a::before {
+    content: "\e913";
+}
+
+[qor-icon-name*="장비"]>a::before {
+    content: "\e333";
+}
+
+[qor-icon-name*="상품"]>a::before {
+    content: "\e903";
+}
+
+[qor-icon-name*="경고"]>a::before {
+    content: "\e925";
+}
+
+[qor-icon-name*="설정"]>a::before {
+    content: "\e869";
+}
+
+[qor-icon-name*="물건"]>a::before {
+    content: "\e84F";
+}
+
+[qor-icon-name*="고객"]>a::before {
+    content: "\e91F";
+}
+
+[qor-icon-name*="속성"]>a::before {
+    content: "\e87B";
+}
+
+[qor-icon-name*="앱관리"]>a::before {
+    content: "\e331";
+}
+
+#initInstaBugLink {
+    width: 36px !important;
+    height: 35px !important;
+}
+
+#instabugSDK {
+    right: 1px !important;
+    bottom: 1px !important;
+}

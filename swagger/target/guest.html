@@ -1,0 +1,595 @@
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aha</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/swagview.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean">
+            <div class="container">
+                <div class="navbar-body">
+                    <div class="row">
+                        <a href="index.html" class="col-md-2 navbar-brand navbar-link">aha</a>
+                        <span class="col-md-10 navbar-brand">ZipView를 위한 저작/관리자 도구</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Main Menu</h3></div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked">
+                                
+                                    
+                                    <li><a href="/realtoroffice.html">RealtorOffice<p class="help-block">부동산중개소</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/devicestatus.html">DeviceStatus<p class="help-block">장비의 상태</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/estate.html">Estate<p class="help-block">매물 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/userstatus.html">UserStatus<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/usertype.html">UserType<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/device.html">Device<p class="help-block">집뷰를 실행하는 장비 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/guest.html">Guest<p class="help-block">공인중개사에 방문한 손님(들) 입니다.</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/viewservice.html">ViewService<p class="help-block">뷰서비스</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/product.html">Product<p class="help-block">컨텐츠로 제작된 상품 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/estatetype.html">EstateType<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/realtor.html">Realtor<p class="help-block">공인중개사</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/purchase.html">Purchase<p class="help-block">공인중개사에서 상품 구매 관리. 하나의 매물에 여러 상품이 있습니다.</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/manufacture.html">Manufacture<p class="help-block">하나의 상품에 여러가지 Unit을 조합하는 작업 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/make.html">Make<p class="help-block">작성된 상품을 제작하여 완성된 상품을 만드는 과정</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/viewtemplate.html">ViewTemplate<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/uploadfile.html">Uploadfile<p class="help-block">물리파일을 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/user.html">User<p class="help-block">집뷰를 로그인하여 사용하는 사용자(관리자, 공인중개사, 손님 등)입니다.</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/component.html">Component<p class="help-block">뷰서비스에 참조 될 실제 콘텐츠들</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/devicetype.html">DeviceType<p class="help-block">장비의 타입</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/deviceusetype.html">DeviceUseType<p class="help-block"></p></a></li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">설명</div>
+                                <div class="panel-body">
+                                    <h3>Guest</h3>
+                                    <span>공인중개사에 방문한 손님(들) 입니다.</span>
+                                    <hr />
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">Email</dt>
+                                            <dd class="col-sm-10">손님 이메일</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">Name</dt>
+                                            <dd class="col-sm-10"></dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">Phone</dt>
+                                            <dd class="col-sm-10">손님 전화번호</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">RealtorID</dt>
+                                            <dd class="col-sm-10">담당 공인중개사</dd>
+                                        </dl>
+                                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">List</h3></div>
+                                <div class="panel-body">
+                                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#createModal">Create</button>
+                                    
+                                    <hr />
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                        <thead>
+                                            <tr id="thead-list">
+                                                <th id="th-id">ID</th>
+                                                
+                                                    
+                                                        <th id="th-email">Email</th>
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                        <th id="th-name">Name</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-phone">Phone</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-realtorid">RealtorID</th>
+                                                    
+                                                
+                                                <th>수정</th>
+                                                <th>삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody-list">
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Detail</h3></div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                    <tbody id="detail">
+                                        
+                                            <tr>
+                                                <th>Email</th>
+                                                <td id="td-detail-email"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>ID</th>
+                                                <td id="td-detail-id"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>Name</th>
+                                                <td id="td-detail-name"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>Phone</th>
+                                                <td id="td-detail-phone"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>RealtorID</th>
+                                                <td id="td-detail-realtorid"></td>
+                                            </tr>
+                                        
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="createModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Create Guest</h4>
+        </div>
+        <div class="modal-body">
+            <div class="contact-clean">
+            <form id="form-create" method="post">
+                <h2 class="text-center">Create Guest</h2>
+                
+                    
+                        <div id="form-group-create-email" class="form-group has-error has-feedback">
+                        <input name="email" type="text" class="form-control input-create input-create-string" id="input-create-email" placeholder="Email" /><i id="form-control-feedback-create-email" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">손님 이메일</p><p id="help-block-valid-create-email" class="help-block"></p></div>
+                    
+                
+                    
+                
+                    
+                        <div id="form-group-create-name" class="form-group has-error has-feedback">
+                        <input name="name" type="text" class="form-control input-create input-create-string" id="input-create-name" placeholder="Name" /><i id="form-control-feedback-create-name" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block"></p><p id="help-block-valid-create-name" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-phone" class="form-group has-error has-feedback">
+                        <input name="phone" type="text" class="form-control input-create input-create-string" id="input-create-phone" placeholder="Phone" /><i id="form-control-feedback-create-phone" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">손님 전화번호</p><p id="help-block-valid-create-phone" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-realtorid" class="form-group has-error has-feedback">
+                        <input name="realtorid" type="text" class="form-control input-create input-create-integer" id="input-create-realtorid" placeholder="RealtorID" /><i id="form-control-feedback-create-realtorid" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">담당 공인중개사</p><p id="help-block-valid-create-realtorid" class="help-block"></p></div>
+                    
+                
+                <div class="form-group">
+                    <button id="btn-create-guest" class="btn btn-primary" type="submit">Create</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal -->
+    <div id="updateModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Update Guest</h4>
+        </div>
+        <div class="modal-body">
+            <div class="contact-clean">
+            <form id="form-update" method="post">
+                <h2 class="text-center">Update Guest</h2>
+                    <div id="form-group-update-id" class="form-group has-error has-feedback">
+                    <input type="text" class="form-control input-update input-update-integer" id="input-update-id" disabled="disabled" id="form-control-feedback-update-id" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                    </div>
+                
+                    <div id="form-group-update-email" class="form-group has-error has-feedback">
+                    <input name="email" type="text" class="form-control input-update input-update-string" id="input-update-email" placeholder="Email" /><i id="form-control-feedback-update-email" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">손님 이메일</p><p id="help-block-valid-update-email" class="help-block"></p></div>
+                
+                    <div id="form-group-update-name" class="form-group has-error has-feedback">
+                    <input name="name" type="text" class="form-control input-update input-update-string" id="input-update-name" placeholder="Name" /><i id="form-control-feedback-update-name" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block"></p><p id="help-block-valid-update-name" class="help-block"></p></div>
+                
+                    <div id="form-group-update-phone" class="form-group has-error has-feedback">
+                    <input name="phone" type="text" class="form-control input-update input-update-string" id="input-update-phone" placeholder="Phone" /><i id="form-control-feedback-update-phone" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">손님 전화번호</p><p id="help-block-valid-update-phone" class="help-block"></p></div>
+                
+                    <div id="form-group-update-realtorid" class="form-group has-error has-feedback">
+                    <input name="realtorid" type="text" class="form-control input-update input-update-integer" id="input-update-realtorid" placeholder="RealtorID" /><i id="form-control-feedback-update-realtorid" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">담당 공인중개사</p><p id="help-block-valid-update-realtorid" class="help-block"></p></div>
+                
+                <div class="form-group">
+                    <button id="btn-update-guest" class="btn btn-primary" type="submit">Update</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script type="text/javascript">
+        var listURL = "/v1/guests";
+        var getURL = "/v1/guests/:id";
+        var createURL = "/v1/guests";
+        var updateURL = "/v1/guests/:id";
+        var deleteURL = "/v1/guests/:id";
+        var currentURL = ""
+
+        $(function() {
+            RequestList()
+            $("#btn-create-guest").click(function(e) {
+                e.preventDefault();
+                
+                var createData = {};
+                    
+                        createData["Email"] = $("#input-create-email").val();
+                        
+                        createData["ID"] = convInteger($("#input-create-id").val());
+                    
+                        createData["Name"] = $("#input-create-name").val();
+                        
+                        createData["Phone"] = $("#input-create-phone").val();
+                        
+                        createData["RealtorID"] = convInteger($("#input-create-realtorid").val());
+                    
+                RequestCreate(createData);
+                
+            });
+
+            $("#btn-update-guest").click(function(e) {
+                e.preventDefault();
+                
+                var updateData = {};
+                
+                    
+                    updateData["Email"] = $("#input-update-email").val();
+                    
+                
+                    
+                    updateData["ID"] = convInteger($("#input-update-id").val());
+                    
+                
+                    
+                    updateData["Name"] = $("#input-update-name").val();
+                    
+                
+                    
+                    updateData["Phone"] = $("#input-update-phone").val();
+                    
+                
+                    
+                    updateData["RealtorID"] = convInteger($("#input-update-realtorid").val());
+                    
+                
+                RequestUpdate(updateData);
+                
+            });
+
+            keySetup("create");
+            keySetup("update");
+        });
+
+        function keySetup(mode) {
+            $(".input-"+mode+"-string").keyup(function() {
+                if($(this).val() == "") {
+                    return;
+                }
+                var id = this.id.split("-")[2]
+                initValidFormGroup(mode, id);
+
+                $("#form-group-"+mode+"-"+id).addClass("has-success");
+                $("#form-control-feedback-"+mode+"-"+id).addClass("glyphicon-ok");
+            });
+
+            $(".input-"+mode+"-integer").keyup(function() {
+                if($(this).val() == "") {
+                    return;
+                }
+                var id = this.id.split("-")[2];
+                initValidFormGroup(mode, id);
+
+                if(isNaN($(this).val())) {
+                    $("#form-group-"+mode+"-"+id).addClass("has-error");
+                    $("#form-control-feedback-"+mode+"-"+id).addClass("glyphicon-remove");
+                    $("#help-block-valid-"+mode+"-"+id).text("숫자만 입력 가능합니다.");
+                } else {
+                    $("#form-group-"+mode+"-"+id).addClass("has-success");
+                    $("#form-control-feedback-"+mode+"-"+id).addClass("glyphicon-ok");
+                }
+            });
+        }
+
+        function initValidFormGroup(mode,id) {
+            $("#form-group-"+mode+"-"+id).removeClass("has-success");
+            $("#form-group-"+mode+"-"+id).removeClass("has-error");
+            $("#form-control-feedback-"+mode+"-"+id).removeClass("glyphicon-ok");
+            $("#form-control-feedback-"+mode+"-"+id).removeClass("glyphicon-remove");
+            $("#help-block-valid-"+mode+"-"+id).text("");;
+        }
+
+        function convInteger(str){
+            if(isNaN(str)) {
+                return 0;
+            }
+            return Number(str);
+        }
+
+        function ChangeLowerKey(targetKey ,data){
+            targetKey = targetKey.toLowerCase();
+            var matchKey = ""
+            $.each( data, function( key, val ) {
+                if(targetKey == key.toLowerCase()) {
+                    matchKey = key
+                }
+            });
+            return matchKey
+        }
+
+        function ListData(data) {
+            $("#tbody-list").text("")
+            var trs = [];
+            $.each( data, function( index, value ) {
+                var tds = [];
+                $.each( value, function( key, val ) {
+                    lowerCaseID = key.toLowerCase()
+                    if(lowerCaseID == "id") {
+                        tds.push( '<td class="json-key-'+key+'" id="td-item-'+value.ID+'-id">'+val+'</td>' );
+                    }
+                }); 
+                var mapValue = {} 
+                
+                    
+                    var val = value[ChangeLowerKey("email", value)]
+                    tds.push( '<td class="json-key-email" id="td-item-'+value.ID+'-email">'+val+'</td>' );
+                    
+                
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("name", value)]
+                    tds.push( '<td class="json-key-name" id="td-item-'+value.ID+'-name">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("phone", value)]
+                    tds.push( '<td class="json-key-phone" id="td-item-'+value.ID+'-phone">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("realtorid", value)]
+                    tds.push( '<td class="json-key-realtorid" id="td-item-'+value.ID+'-realtorid">'+val+'</td>' );
+                    
+                
+                
+                tds.push( '<td><button class="btn btn-warning btn-update-item" id="btn-update-item-'+value.ID+'">수정</button></td>' );
+                tds.push( '<td><button class="btn btn-danger btn-delete-item" id="btn-delete-item-'+value.ID+'">삭제</button></td>' );
+                
+                $( '<tr />', {
+                    html: tds.join( "" ),
+                    id: 'tr-item-'+value.ID}
+                ).appendTo("#tbody-list");
+            })
+            
+            $(".btn-update-item").click(function() {
+                var id = this.id.split("-")[3]
+                
+                    $("#input-update-email").val($('#td-item-'+id+'-email').text())
+                
+                    $("#input-update-id").val($('#td-item-'+id+'-id').text())
+                
+                    $("#input-update-name").val($('#td-item-'+id+'-name').text())
+                
+                    $("#input-update-phone").val($('#td-item-'+id+'-phone').text())
+                
+                    $("#input-update-realtorid").val($('#td-item-'+id+'-realtorid').text())
+                
+                $("#updateModal").modal("show");
+            })
+
+            $(".btn-delete-item").click(function() {
+                var id = this.id.split("-")[3];
+                RequestDelete(id);
+            })
+        }
+        
+        function RequestList(){
+            $.getJSON( listURL, function( data ) {
+                ListData(data);
+            });
+        }
+
+        function RequestUpdate(data) {
+            var url = updateURL.replace(":id", itemID)
+            $.ajax({
+                url: url,
+                type: 'PUT',
+                data: JSON.stringify(data),
+                success: function(result) {
+                    RequestList();
+                },
+                error: function(result){
+                    alert(err.statusText);
+                },
+                dataType: "json",
+                contentType: "application/json"
+            });
+            $("#updateModal").modal("hide");
+        }
+
+        function RequestCreate(data) {
+            $.ajax({
+                type: "POST",
+                url: createURL,
+                data: JSON.stringify(data),
+                success: function() {
+                    RequestList();
+                },
+                error: function(err) {
+                    alert(err.statusText);
+                },
+                dataType: "json",
+                contentType: "application/json"
+            });
+            $("#createModal").modal("hide");
+        }
+
+        function RequestDelete(itemID) {
+            var url = deleteURL.replace(":id", itemID)
+            console.log("Delete item : " + itemID)
+            $.ajax({
+                url: url,
+                type: 'DELETE',
+                success: function(result) {
+                    RequestList();
+                },
+                error: function(result){
+                    alert(err.statusText);
+                }
+            });
+        }
+    </script>
+    </body>
+</html>
+

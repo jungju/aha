@@ -1,0 +1,790 @@
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aha</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/swagview.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default navigation-clean">
+            <div class="container">
+                <div class="navbar-body">
+                    <div class="row">
+                        <a href="index.html" class="col-md-2 navbar-brand navbar-link">aha</a>
+                        <span class="col-md-10 navbar-brand">ZipView를 위한 저작/관리자 도구</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Main Menu</h3></div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked">
+                                
+                                    
+                                    <li><a href="/realtoroffice.html">RealtorOffice<p class="help-block">부동산중개소</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/devicestatus.html">DeviceStatus<p class="help-block">장비의 상태</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/estate.html">Estate<p class="help-block">매물 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/userstatus.html">UserStatus<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/usertype.html">UserType<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/device.html">Device<p class="help-block">집뷰를 실행하는 장비 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/guest.html">Guest<p class="help-block">공인중개사에 방문한 손님(들) 입니다.</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/viewservice.html">ViewService<p class="help-block">뷰서비스</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/product.html">Product<p class="help-block">컨텐츠로 제작된 상품 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/estatetype.html">EstateType<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/realtor.html">Realtor<p class="help-block">공인중개사</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/purchase.html">Purchase<p class="help-block">공인중개사에서 상품 구매 관리. 하나의 매물에 여러 상품이 있습니다.</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/manufacture.html">Manufacture<p class="help-block">하나의 상품에 여러가지 Unit을 조합하는 작업 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/make.html">Make<p class="help-block">작성된 상품을 제작하여 완성된 상품을 만드는 과정</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/viewtemplate.html">ViewTemplate<p class="help-block"></p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/uploadfile.html">Uploadfile<p class="help-block">물리파일을 관리</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/user.html">User<p class="help-block">집뷰를 로그인하여 사용하는 사용자(관리자, 공인중개사, 손님 등)입니다.</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/component.html">Component<p class="help-block">뷰서비스에 참조 될 실제 콘텐츠들</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/devicetype.html">DeviceType<p class="help-block">장비의 타입</p></a></li>
+                                    
+                                
+                                    
+                                    <li><a href="/deviceusetype.html">DeviceUseType<p class="help-block"></p></a></li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">설명</div>
+                                <div class="panel-body">
+                                    <h3>Device</h3>
+                                    <span>집뷰를 실행하는 장비 관리</span>
+                                    <hr />
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">CreatorID</dt>
+                                            <dd class="col-sm-10">담당자</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">EnableRemote</dt>
+                                            <dd class="col-sm-10">원격 조정 가능 여부</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">HasInteraction</dt>
+                                            <dd class="col-sm-10">인터랙티브 가능 여부</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">IP</dt>
+                                            <dd class="col-sm-10">장비의 접근 가능한 IP</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">Name</dt>
+                                            <dd class="col-sm-10">장비 이름</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">StatusID</dt>
+                                            <dd class="col-sm-10">장비 상태</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">TypeID</dt>
+                                            <dd class="col-sm-10">장비의 타입 1:WindowsPC, 2:Web, 3:IOS, 4:Android</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">UseTypeID</dt>
+                                            <dd class="col-sm-10">사용 타입</dd>
+                                        </dl>
+                                        
+                                    
+                                        
+                                        <dl class="row">
+                                            <dt class="col-sm-2">UserID</dt>
+                                            <dd class="col-sm-10">장비의 소유자 ID</dd>
+                                        </dl>
+                                        
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">List</h3></div>
+                                <div class="panel-body">
+                                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#createModal">Create</button>
+                                    
+                                    <hr />
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                        <thead>
+                                            <tr id="thead-list">
+                                                <th id="th-id">ID</th>
+                                                
+                                                    
+                                                        <th id="th-creatorid">CreatorID</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-enableremote">EnableRemote</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-hasinteraction">HasInteraction</th>
+                                                    
+                                                
+                                                    
+                                                
+                                                    
+                                                        <th id="th-ip">IP</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-name">Name</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-statusid">StatusID</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-typeid">TypeID</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-usetypeid">UseTypeID</th>
+                                                    
+                                                
+                                                    
+                                                        <th id="th-userid">UserID</th>
+                                                    
+                                                
+                                                <th>수정</th>
+                                                <th>삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody-list">
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Detail</h3></div>
+                                <div class="panel-body">
+                                    <table class="table">
+                                    <tbody id="detail">
+                                        
+                                            <tr>
+                                                <th>CreatorID</th>
+                                                <td id="td-detail-creatorid"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>EnableRemote</th>
+                                                <td id="td-detail-enableremote"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>HasInteraction</th>
+                                                <td id="td-detail-hasinteraction"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>ID</th>
+                                                <td id="td-detail-id"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>IP</th>
+                                                <td id="td-detail-ip"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>Name</th>
+                                                <td id="td-detail-name"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>StatusID</th>
+                                                <td id="td-detail-statusid"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>TypeID</th>
+                                                <td id="td-detail-typeid"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>UseTypeID</th>
+                                                <td id="td-detail-usetypeid"></td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <th>UserID</th>
+                                                <td id="td-detail-userid"></td>
+                                            </tr>
+                                        
+                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="createModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Create Device</h4>
+        </div>
+        <div class="modal-body">
+            <div class="contact-clean">
+            <form id="form-create" method="post">
+                <h2 class="text-center">Create Device</h2>
+                
+                    
+                        <div id="form-group-create-creatorid" class="form-group has-error has-feedback">
+                        <input name="creatorid" type="text" class="form-control input-create input-create-integer" id="input-create-creatorid" placeholder="CreatorID" /><i id="form-control-feedback-create-creatorid" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">담당자</p><p id="help-block-valid-create-creatorid" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-enableremote" class="form-group has-error has-feedback">
+                        <input name="enableremote" type="text" class="form-control input-create input-create-string" id="input-create-enableremote" placeholder="EnableRemote" /><i id="form-control-feedback-create-enableremote" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">원격 조정 가능 여부</p><p id="help-block-valid-create-enableremote" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-hasinteraction" class="form-group has-error has-feedback">
+                        <input name="hasinteraction" type="text" class="form-control input-create input-create-string" id="input-create-hasinteraction" placeholder="HasInteraction" /><i id="form-control-feedback-create-hasinteraction" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">인터랙티브 가능 여부</p><p id="help-block-valid-create-hasinteraction" class="help-block"></p></div>
+                    
+                
+                    
+                
+                    
+                        <div id="form-group-create-ip" class="form-group has-error has-feedback">
+                        <input name="ip" type="text" class="form-control input-create input-create-string" id="input-create-ip" placeholder="IP" /><i id="form-control-feedback-create-ip" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">장비의 접근 가능한 IP</p><p id="help-block-valid-create-ip" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-name" class="form-group has-error has-feedback">
+                        <input name="name" type="text" class="form-control input-create input-create-string" id="input-create-name" placeholder="Name" /><i id="form-control-feedback-create-name" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">장비 이름</p><p id="help-block-valid-create-name" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-statusid" class="form-group has-error has-feedback">
+                        <input name="statusid" type="text" class="form-control input-create input-create-integer" id="input-create-statusid" placeholder="StatusID" /><i id="form-control-feedback-create-statusid" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">장비 상태</p><p id="help-block-valid-create-statusid" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-typeid" class="form-group has-error has-feedback">
+                        <input name="typeid" type="text" class="form-control input-create input-create-integer" id="input-create-typeid" placeholder="TypeID" /><i id="form-control-feedback-create-typeid" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">장비의 타입 1:WindowsPC, 2:Web, 3:IOS, 4:Android</p><p id="help-block-valid-create-typeid" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-usetypeid" class="form-group has-error has-feedback">
+                        <input name="usetypeid" type="text" class="form-control input-create input-create-integer" id="input-create-usetypeid" placeholder="UseTypeID" /><i id="form-control-feedback-create-usetypeid" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">사용 타입</p><p id="help-block-valid-create-usetypeid" class="help-block"></p></div>
+                    
+                
+                    
+                        <div id="form-group-create-userid" class="form-group has-error has-feedback">
+                        <input name="userid" type="text" class="form-control input-create input-create-integer" id="input-create-userid" placeholder="UserID" /><i id="form-control-feedback-create-userid" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                        <p class="help-block">장비의 소유자 ID</p><p id="help-block-valid-create-userid" class="help-block"></p></div>
+                    
+                
+                <div class="form-group">
+                    <button id="btn-create-device" class="btn btn-primary" type="submit">Create</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal -->
+    <div id="updateModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Update Device</h4>
+        </div>
+        <div class="modal-body">
+            <div class="contact-clean">
+            <form id="form-update" method="post">
+                <h2 class="text-center">Update Device</h2>
+                    <div id="form-group-update-id" class="form-group has-error has-feedback">
+                    <input type="text" class="form-control input-update input-update-integer" id="input-update-id" disabled="disabled" id="form-control-feedback-update-id" class="form-control-feedback glyphicon" aria-hidden="true"></i>
+                    </div>
+                
+                    <div id="form-group-update-creatorid" class="form-group has-error has-feedback">
+                    <input name="creatorid" type="text" class="form-control input-update input-update-integer" id="input-update-creatorid" placeholder="CreatorID" /><i id="form-control-feedback-update-creatorid" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">담당자</p><p id="help-block-valid-update-creatorid" class="help-block"></p></div>
+                
+                    <div id="form-group-update-enableremote" class="form-group has-error has-feedback">
+                    <input name="enableremote" type="text" class="form-control input-update input-update-string" id="input-update-enableremote" placeholder="EnableRemote" /><i id="form-control-feedback-update-enableremote" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">원격 조정 가능 여부</p><p id="help-block-valid-update-enableremote" class="help-block"></p></div>
+                
+                    <div id="form-group-update-hasinteraction" class="form-group has-error has-feedback">
+                    <input name="hasinteraction" type="text" class="form-control input-update input-update-string" id="input-update-hasinteraction" placeholder="HasInteraction" /><i id="form-control-feedback-update-hasinteraction" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">인터랙티브 가능 여부</p><p id="help-block-valid-update-hasinteraction" class="help-block"></p></div>
+                
+                    <div id="form-group-update-ip" class="form-group has-error has-feedback">
+                    <input name="ip" type="text" class="form-control input-update input-update-string" id="input-update-ip" placeholder="IP" /><i id="form-control-feedback-update-ip" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">장비의 접근 가능한 IP</p><p id="help-block-valid-update-ip" class="help-block"></p></div>
+                
+                    <div id="form-group-update-name" class="form-group has-error has-feedback">
+                    <input name="name" type="text" class="form-control input-update input-update-string" id="input-update-name" placeholder="Name" /><i id="form-control-feedback-update-name" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">장비 이름</p><p id="help-block-valid-update-name" class="help-block"></p></div>
+                
+                    <div id="form-group-update-statusid" class="form-group has-error has-feedback">
+                    <input name="statusid" type="text" class="form-control input-update input-update-integer" id="input-update-statusid" placeholder="StatusID" /><i id="form-control-feedback-update-statusid" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">장비 상태</p><p id="help-block-valid-update-statusid" class="help-block"></p></div>
+                
+                    <div id="form-group-update-typeid" class="form-group has-error has-feedback">
+                    <input name="typeid" type="text" class="form-control input-update input-update-integer" id="input-update-typeid" placeholder="TypeID" /><i id="form-control-feedback-update-typeid" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">장비의 타입 1:WindowsPC, 2:Web, 3:IOS, 4:Android</p><p id="help-block-valid-update-typeid" class="help-block"></p></div>
+                
+                    <div id="form-group-update-usetypeid" class="form-group has-error has-feedback">
+                    <input name="usetypeid" type="text" class="form-control input-update input-update-integer" id="input-update-usetypeid" placeholder="UseTypeID" /><i id="form-control-feedback-update-usetypeid" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">사용 타입</p><p id="help-block-valid-update-usetypeid" class="help-block"></p></div>
+                
+                    <div id="form-group-update-userid" class="form-group has-error has-feedback">
+                    <input name="userid" type="text" class="form-control input-update input-update-integer" id="input-update-userid" placeholder="UserID" /><i id="form-control-feedback-update-userid" class="form-control-feedback glyphicon" aria-hidden="true" ></i>
+                    <p class="help-block">장비의 소유자 ID</p><p id="help-block-valid-update-userid" class="help-block"></p></div>
+                
+                <div class="form-group">
+                    <button id="btn-update-device" class="btn btn-primary" type="submit">Update</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script type="text/javascript">
+        var listURL = "/v1/devices";
+        var getURL = "/v1/devices/:id";
+        var createURL = "/v1/devices";
+        var updateURL = "/v1/devices/:id";
+        var deleteURL = "/v1/devices/:id";
+        var currentURL = ""
+
+        $(function() {
+            RequestList()
+            $("#btn-create-device").click(function(e) {
+                e.preventDefault();
+                
+                var createData = {};
+                    
+                        createData["CreatorID"] = convInteger($("#input-create-creatorid").val());
+                    
+                        createData["EnableRemote"] = $("#input-create-enableremote").val();
+                        
+                        createData["HasInteraction"] = $("#input-create-hasinteraction").val();
+                        
+                        createData["ID"] = convInteger($("#input-create-id").val());
+                    
+                        createData["IP"] = $("#input-create-ip").val();
+                        
+                        createData["Name"] = $("#input-create-name").val();
+                        
+                        createData["StatusID"] = convInteger($("#input-create-statusid").val());
+                    
+                        createData["TypeID"] = convInteger($("#input-create-typeid").val());
+                    
+                        createData["UseTypeID"] = convInteger($("#input-create-usetypeid").val());
+                    
+                        createData["UserID"] = convInteger($("#input-create-userid").val());
+                    
+                RequestCreate(createData);
+                
+            });
+
+            $("#btn-update-device").click(function(e) {
+                e.preventDefault();
+                
+                var updateData = {};
+                
+                    
+                    updateData["CreatorID"] = convInteger($("#input-update-creatorid").val());
+                    
+                
+                    
+                    updateData["EnableRemote"] = $("#input-update-enableremote").val();
+                    
+                
+                    
+                    updateData["HasInteraction"] = $("#input-update-hasinteraction").val();
+                    
+                
+                    
+                    updateData["ID"] = convInteger($("#input-update-id").val());
+                    
+                
+                    
+                    updateData["IP"] = $("#input-update-ip").val();
+                    
+                
+                    
+                    updateData["Name"] = $("#input-update-name").val();
+                    
+                
+                    
+                    updateData["StatusID"] = convInteger($("#input-update-statusid").val());
+                    
+                
+                    
+                    updateData["TypeID"] = convInteger($("#input-update-typeid").val());
+                    
+                
+                    
+                    updateData["UseTypeID"] = convInteger($("#input-update-usetypeid").val());
+                    
+                
+                    
+                    updateData["UserID"] = convInteger($("#input-update-userid").val());
+                    
+                
+                RequestUpdate(updateData);
+                
+            });
+
+            keySetup("create");
+            keySetup("update");
+        });
+
+        function keySetup(mode) {
+            $(".input-"+mode+"-string").keyup(function() {
+                if($(this).val() == "") {
+                    return;
+                }
+                var id = this.id.split("-")[2]
+                initValidFormGroup(mode, id);
+
+                $("#form-group-"+mode+"-"+id).addClass("has-success");
+                $("#form-control-feedback-"+mode+"-"+id).addClass("glyphicon-ok");
+            });
+
+            $(".input-"+mode+"-integer").keyup(function() {
+                if($(this).val() == "") {
+                    return;
+                }
+                var id = this.id.split("-")[2];
+                initValidFormGroup(mode, id);
+
+                if(isNaN($(this).val())) {
+                    $("#form-group-"+mode+"-"+id).addClass("has-error");
+                    $("#form-control-feedback-"+mode+"-"+id).addClass("glyphicon-remove");
+                    $("#help-block-valid-"+mode+"-"+id).text("숫자만 입력 가능합니다.");
+                } else {
+                    $("#form-group-"+mode+"-"+id).addClass("has-success");
+                    $("#form-control-feedback-"+mode+"-"+id).addClass("glyphicon-ok");
+                }
+            });
+        }
+
+        function initValidFormGroup(mode,id) {
+            $("#form-group-"+mode+"-"+id).removeClass("has-success");
+            $("#form-group-"+mode+"-"+id).removeClass("has-error");
+            $("#form-control-feedback-"+mode+"-"+id).removeClass("glyphicon-ok");
+            $("#form-control-feedback-"+mode+"-"+id).removeClass("glyphicon-remove");
+            $("#help-block-valid-"+mode+"-"+id).text("");;
+        }
+
+        function convInteger(str){
+            if(isNaN(str)) {
+                return 0;
+            }
+            return Number(str);
+        }
+
+        function ChangeLowerKey(targetKey ,data){
+            targetKey = targetKey.toLowerCase();
+            var matchKey = ""
+            $.each( data, function( key, val ) {
+                if(targetKey == key.toLowerCase()) {
+                    matchKey = key
+                }
+            });
+            return matchKey
+        }
+
+        function ListData(data) {
+            $("#tbody-list").text("")
+            var trs = [];
+            $.each( data, function( index, value ) {
+                var tds = [];
+                $.each( value, function( key, val ) {
+                    lowerCaseID = key.toLowerCase()
+                    if(lowerCaseID == "id") {
+                        tds.push( '<td class="json-key-'+key+'" id="td-item-'+value.ID+'-id">'+val+'</td>' );
+                    }
+                }); 
+                var mapValue = {} 
+                
+                    
+                    var val = value[ChangeLowerKey("creatorid", value)]
+                    tds.push( '<td class="json-key-creatorid" id="td-item-'+value.ID+'-creatorid">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("enableremote", value)]
+                    tds.push( '<td class="json-key-enableremote" id="td-item-'+value.ID+'-enableremote">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("hasinteraction", value)]
+                    tds.push( '<td class="json-key-hasinteraction" id="td-item-'+value.ID+'-hasinteraction">'+val+'</td>' );
+                    
+                
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("ip", value)]
+                    tds.push( '<td class="json-key-ip" id="td-item-'+value.ID+'-ip">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("name", value)]
+                    tds.push( '<td class="json-key-name" id="td-item-'+value.ID+'-name">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("statusid", value)]
+                    tds.push( '<td class="json-key-statusid" id="td-item-'+value.ID+'-statusid">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("typeid", value)]
+                    tds.push( '<td class="json-key-typeid" id="td-item-'+value.ID+'-typeid">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("usetypeid", value)]
+                    tds.push( '<td class="json-key-usetypeid" id="td-item-'+value.ID+'-usetypeid">'+val+'</td>' );
+                    
+                
+                    
+                    var val = value[ChangeLowerKey("userid", value)]
+                    tds.push( '<td class="json-key-userid" id="td-item-'+value.ID+'-userid">'+val+'</td>' );
+                    
+                
+                
+                tds.push( '<td><button class="btn btn-warning btn-update-item" id="btn-update-item-'+value.ID+'">수정</button></td>' );
+                tds.push( '<td><button class="btn btn-danger btn-delete-item" id="btn-delete-item-'+value.ID+'">삭제</button></td>' );
+                
+                $( '<tr />', {
+                    html: tds.join( "" ),
+                    id: 'tr-item-'+value.ID}
+                ).appendTo("#tbody-list");
+            })
+            
+            $(".btn-update-item").click(function() {
+                var id = this.id.split("-")[3]
+                
+                    $("#input-update-creatorid").val($('#td-item-'+id+'-creatorid').text())
+                
+                    $("#input-update-enableremote").val($('#td-item-'+id+'-enableremote').text())
+                
+                    $("#input-update-hasinteraction").val($('#td-item-'+id+'-hasinteraction').text())
+                
+                    $("#input-update-id").val($('#td-item-'+id+'-id').text())
+                
+                    $("#input-update-ip").val($('#td-item-'+id+'-ip').text())
+                
+                    $("#input-update-name").val($('#td-item-'+id+'-name').text())
+                
+                    $("#input-update-statusid").val($('#td-item-'+id+'-statusid').text())
+                
+                    $("#input-update-typeid").val($('#td-item-'+id+'-typeid').text())
+                
+                    $("#input-update-usetypeid").val($('#td-item-'+id+'-usetypeid').text())
+                
+                    $("#input-update-userid").val($('#td-item-'+id+'-userid').text())
+                
+                $("#updateModal").modal("show");
+            })
+
+            $(".btn-delete-item").click(function() {
+                var id = this.id.split("-")[3];
+                RequestDelete(id);
+            })
+        }
+        
+        function RequestList(){
+            $.getJSON( listURL, function( data ) {
+                ListData(data);
+            });
+        }
+
+        function RequestUpdate(data) {
+            var url = updateURL.replace(":id", itemID)
+            $.ajax({
+                url: url,
+                type: 'PUT',
+                data: JSON.stringify(data),
+                success: function(result) {
+                    RequestList();
+                },
+                error: function(result){
+                    alert(err.statusText);
+                },
+                dataType: "json",
+                contentType: "application/json"
+            });
+            $("#updateModal").modal("hide");
+        }
+
+        function RequestCreate(data) {
+            $.ajax({
+                type: "POST",
+                url: createURL,
+                data: JSON.stringify(data),
+                success: function() {
+                    RequestList();
+                },
+                error: function(err) {
+                    alert(err.statusText);
+                },
+                dataType: "json",
+                contentType: "application/json"
+            });
+            $("#createModal").modal("hide");
+        }
+
+        function RequestDelete(itemID) {
+            var url = deleteURL.replace(":id", itemID)
+            console.log("Delete item : " + itemID)
+            $.ajax({
+                url: url,
+                type: 'DELETE',
+                success: function(result) {
+                    RequestList();
+                },
+                error: function(result){
+                    alert(err.statusText);
+                }
+            });
+        }
+    </script>
+    </body>
+</html>
+

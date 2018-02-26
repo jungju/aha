@@ -1,0 +1,50 @@
+{
+  "name": "myzipview",
+  "description": "myzipview",
+  "author": "",
+  "private": true,
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack-dev-server -d --inline --hot --env.dev --port 8010 --history-api-fallback",
+    "build-dev": "webpack -w -d --progress --hide-modules",
+    "build": "rimraf dist && webpack -p --progress --hide-modules"
+  },
+  "dependencies": {
+    "@xkeshi/vue-countdown": "github:xkeshi/vue-countdown",
+    "axios": "^0.17.1",
+    "element-ui": "^2.0.11",
+    "nprogress": "^0.2.0",
+    "vue": "^2.5.13",
+    "vue-awesome-swiper": "^3.1.2",
+    "vue-fullscreen": "^2.1.3",
+    "vue-router": "^3.0.1",
+    "vuedraggable": "^2.16.0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.27.0",
+    "es6-promise": "^4.2.4",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.24.1",
+    "imports-loader": "^0.7.1",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^1.3.3",
+    "pug": "^2.0.0-rc.4",
+    "qs": "^6.5.1",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.13.2",
+    "swagger-vue": "https://github.com/chenweiqun/swagger-vue/tarball/master",
+    "url-loader": "^0.5.8",
+    "vue-loader": "^13.7.0",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}

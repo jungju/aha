@@ -1,0 +1,58 @@
+package models
+
+import (
+	"time"
+  )
+
+// gen:qs
+type {ModelName} struct {
+	ID          uint                 `description:""`
+	CreatedAt   time.Time            `description:"등록일"`
+	UpdatedAt   time.Time            `description:"수정일"`
+	Description string               `description:"설명"`
+  //TODO:
+}
+
+// Add{ModelName} insert a new {modelName} into database and returns
+// last inserted ID on success.
+func Add{ModelName}({modelName} *{ModelName}) (id uint, err error) {
+	err = {modelName}.Create(gGormDB)
+	id = {modelName}.ID
+	return
+}
+
+// Get{ModelName}ByID retrieves {modelName} by ID. Returns error if
+// ID doesn't exist
+func Get{ModelName}ByID(id uint) ({modelName} *{ModelName}, err error) {
+	{modelName} = &{ModelName}{
+		ID: id,
+	}
+	err = New{ModelName}QuerySet(gGormDB).One({modelName})
+	return
+}
+
+// GetAll{modelName} retrieves all {modelName} matches certain condition. Returns empty list if
+// no records exist
+func GetAll{ModelName}(queryPage *QueryPage) ({modelName}s []{ModelName}, err error) {
+	err = New{ModelName}QuerySet(gGormDB).All(&{modelName}s)
+	return
+}
+
+// Update{ModelName} updates {modelName} by ID and returns error if
+// the record to be updated doesn't exist
+func Update{ModelName}ByID({modelName} *{ModelName}) (err error) {
+	err = {modelName}.Update(gGormDB,
+		{ModelName}DBSchema.Description,
+	)
+	return
+}
+
+// Delete{ModelName} deletes {modelName} by ID and returns error if
+// the record to be deleted doesn't exist
+func Delete{ModelName}(id uint) (err error) {
+	{modelName} := &{ModelName}{
+		ID: id,
+	}
+	err = {modelName}.Delete(gGormDB)
+	return
+}

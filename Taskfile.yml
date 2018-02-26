@@ -1,0 +1,53 @@
+# github.com/go-task/task
+
+dev:
+  cmds:
+    - bee run -downdoc=true -gendoc=true
+  env:
+    PRODENV: dev
+    SECRET_KEY: superjjgo
+    DB_HOST: 127.0.0.1
+    DB_NAME: makezip
+    DB_USER: root
+    DB_PASS: olim
+
+dev-www:
+  cmds:
+    - cd web/www && npm run dev
+
+dev-editor:
+  cmds:
+    - cd web/editor && npm run dev
+
+build-dev:
+  cmds:
+    - cd web && npm run build-dev
+
+server:
+  cmds:
+    - bee run -downdoc=true -gendoc=true -tags 'bindatafs'
+  env:
+    PRODENV: test
+    SECRET_KEY: superolim
+    DB_HOST: 127.0.0.1
+    DB_NAME: aha
+    DB_USER: root
+    DB_PASS: jjgo
+
+build:
+  cmds:
+    - npm run build
+
+docker-run:
+  cmds:
+    - docker build -t ahatest .
+    - docker run -it -e GOENV=dev -e PRODENV=beta -e SECRET_KEY=superjjgo -e SYSTEM_ADMIN=system -e SYSTEM_PASSWORD=1 -e DB_HOST=172.17.0.3 -e DB_NAME=testaha -e DB_USER=root -e DB_PASS=jjgo -p 8081:8081 ahatest
+
+dockerpush:
+  cmds:
+    - docker build -t jungju/aha:{{.TAG}} .
+    - docker push jungju/aha:{{.TAG}}
+
+devtool:
+  cmds:
+    - cat dev.script | machma -p 2 -- sh -c $1 {}

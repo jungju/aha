@@ -1,0 +1,263 @@
+@import "variable";
+html {
+  overflow-y: scroll;
+}
+body {
+    font-family: "맑은고딕", "Malgun Gothic", "Apple SD Gothic Neo", "sans-serif";
+    background: rgba(0,0,0,0.05);
+    padding: 0;
+    margin: 0;
+    color: #3f3f42;
+    overflow-y: initial;
+}
+a {
+    color: inherit;
+  	text-decoration: none;
+}
+img {
+  	vertical-align: middle;
+    border-style: none;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+	  list-style-type: none;
+}
+button {
+  	display: inline-block;
+  	padding: 0;
+  	border: none;
+  	background: none;
+  	cursor: pointer;
+  	outline: none;
+}
+button, input, textarea {
+  font-family: inherit;
+}
+.clearfix::after {
+  	display: block;
+  	content: '';
+  	clear: both;
+}
+.container {
+    // min-width: 960px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.box-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+// header
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: rgba(255,255,255,0.7);
+  border-bottom: 1px solid $line-color;
+  z-index: 100;
+  .zipview-logo {
+      display: inline-block;
+      margin: 0;
+  }
+  .zipview-logo img {
+      width: 95px;
+      height: 24px;
+  }
+}
+.sub-menus {
+  float: right;
+  font-size: 14px;
+  .menu {
+    float: left;
+    margin-left: 34px;
+  }
+  .material-icons {
+    font-size: 16px;
+    margin-right: 3px;
+    color: rgba(0,0,0,0.3);
+    vertical-align: sub;
+  }
+  .menu-demon .material-icons {
+    color: #5ab73b;
+  }
+}
+
+// main
+.app-wrap {
+  .contents {
+    padding-top: 80px;
+  }
+}
+
+// 각페이지 title
+.page-title {
+  position: fixed;
+  top: 21px;
+  margin: 0;
+  margin-left: 112px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 200;
+  z-index: 1000;
+  &:before {
+    display: inline-block;
+    content: '|';
+    font-weight: 200;
+    color: $main-color;
+    margin-right: 12px;
+  }
+}
+
+// footer
+footer {
+  position: relative;
+  margin-top: $main-margin;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  line-height: $footer-height;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 300;
+  background: #464b55;
+  z-index: 100;
+  a {
+    display: inline-block;
+    color: $main-color;
+    padding: 0 5px;
+  }
+  .olim-logo {
+    float: right;
+    width: 80px;
+    height: 20px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+  }
+}
+
+// breadcrumb
+.el-breadcrumb__inner, .el-breadcrumb__inner a {
+  color: rgba(0,0,0,0.5);
+  font-weight: 100;
+}
+.el-breadcrumb__inner a:hover, .el-breadcrumb__inner:hover {
+  color: inherit;
+}
+
+// mixin
+@mixin transition($sec: .2s, $trans: cubic-bezier(.4,0,.2,1)) {
+  transition: all $sec $trans;
+}
+
+// button
+.button {
+  @include transition();
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+  box-sizing: border-box;
+  border-radius: 5px;
+  &:hover {
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,.5);
+  }
+  &:active {
+    box-shadow: inset 0px 0px 5px 0 rgba(0,0,0,.5);
+  }
+}
+.main-button {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  background: $main-color;
+  color: #fff;
+}
+.line-button {
+  padding: 4px 7px;
+  background: #fff;
+  border: 1px solid #e2e1e1;
+  &:hover {
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,.2);
+  }
+  &:active {
+    box-shadow: inset 0px 0px 5px 0 rgba(0,0,0,.3);
+  }
+}
+.main-line-button {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  color: $main-color;
+  font-weight: 300;
+  background: rgba(255,255,255,.9);
+  border: 1px solid $main-color;
+}
+.confirm-button {
+  width: 90px;
+  height: 40px;
+  background: $sub-color;
+  color: #fff;
+}
+.cancel-button {
+  width: 90px;
+  height: 40px;
+  border: 1px solid #aaa;
+  // background: $font-sub-color;
+  // color: #fff;
+}
+
+.gray-box {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .07), 0 1px 1px 0 rgba(0, 0, 0, .15);
+}
+
+.sub-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+#gitple-launcher-icon {
+  box-shadow: none!important;
+}

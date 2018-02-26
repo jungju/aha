@@ -1,0 +1,2 @@
+cd web/www && npm run build-dev
+cd web/editor && npm run build-dev
