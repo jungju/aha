@@ -63,7 +63,7 @@ func setRouter() {
 		validAPIURL = regexp.MustCompile(`^/editor/*`)
 		if validAPIURL.Match([]byte(ctx.Input.URL())) {
 			beego.Debug("EDITOR")
-			c, err := ioutil.ReadFile("web/editor/index.html")
+			c, err := ioutil.ReadFile("web/editor/dist/index.html")
 			if err != nil {
 				logs.Error(err)
 			}
@@ -83,8 +83,8 @@ func setRouter() {
 		}
 	})
 
-	beego.SetStaticPath("/editor/dist", "web/editor/dist")
-	beego.SetStaticPath("/editor/assets", "web/editor/assets")
+	//beego.SetStaticPath("/editor/dist", "web/editor/dist")
+	beego.SetStaticPath("/editor/assets", "web/editor/dist/assets")
 	beego.SetStaticPath("/assets", "web/www/dist/assets")
 }
 

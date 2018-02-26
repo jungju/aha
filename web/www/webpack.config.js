@@ -13,6 +13,31 @@ module.exports = (options = {}) => ({
     chunkFilename: 'assets/[id].js?[chunkhash]',
     publicPath: options.dev ? '/' : publicPath
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new webpack.ProvidePlugin({
+      Promise: 'imports-loader?this=>global!exports-loader?global.Promise!es6-promise',
+    }),
+    new webpack.DefinePlugin({
+        __DEV__ : options.dev ? true : false
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+          warnings: false
+      }
+    }),
+  ],
+  resolve: {
+    alias: {
+      '~': resolve(__dirname, 'src')
+    },
+  },
   module: {
     rules: [
         {
@@ -57,30 +82,5 @@ module.exports = (options = {}) => ({
           }]
         }
     ],
-}, // end module
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    }),
-    new webpack.ProvidePlugin({
-      Promise: 'imports-loader?this=>global!exports-loader?global.Promise!es6-promise',
-    }),
-    new webpack.DefinePlugin({
-        __DEV__ : options.dev ? true : false
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      compress: {
-          warnings: false
-      }
-    }),
-  ],
-  resolve: {
-    alias: {
-      '~': resolve(__dirname, 'src')
-    },
-  },
+  }, // end module
 })
