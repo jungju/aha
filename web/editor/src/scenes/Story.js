@@ -6,10 +6,15 @@ export default class extends Phaser.Scene {
   }
 
   preload () {
+    //TODO: storybook 가져오기
+    
   }
 
   create () {
+    
   }
 
-  update () {}
+  update () {
+
+  }
 }

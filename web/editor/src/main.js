@@ -1,5 +1,11 @@
 import Phaser from 'phaser'
 
+import {setDomain} from './client'
+import {
+    StoryController_Get_All
+  } from '~/client'
+setDomain("/v1");
+
 // import BootScene from './scenes/Boot'
 // import SplashScene from './scenes/Splash'
 // import GameScene from './scenes/Game'
@@ -36,15 +42,19 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
-    function preload ()
-    {
+    function preload (){
+        StoryController_Get_All({}).then(response =>{
+            console.log(response.data)
+        }).catch(error => {
+            
+        });
+
         this.load.setBaseURL('http://labs.phaser.io');
         this.load.image('sky', 'assets/skies/space3.png');
         this.load.image('logo', 'assets/sprites/phaser3-logo.png');
         this.load.image('red', 'assets/particles/red.png');
     }
-    function create ()
-    {
+    function create (){
         this.add.image(400, 300, 'sky');
         var particles = this.add.particles('red');
         var emitter = particles.createEmitter({

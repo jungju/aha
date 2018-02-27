@@ -142,6 +142,8 @@ func InitDefaultRow() error {
 		}))
 	}
 
+	testData()
+
 	return nil
 }
 

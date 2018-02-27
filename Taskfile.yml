@@ -7,7 +7,7 @@ dev:
     PRODENV: dev
     SECRET_KEY: superjjgo
     DB_HOST: 127.0.0.1
-    DB_NAME: makezip
+    DB_NAME: aha
     DB_USER: root
     DB_PASS: olim
 

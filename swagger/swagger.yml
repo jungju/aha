@@ -650,6 +650,11 @@ definitions:
         format: int32
       Name:
         type: string
+      Scene:
+        $ref: '#/definitions/models.Scene'
+      SceneID:
+        type: integer
+        format: int32
       SpriteStyles:
         type: array
         items:
@@ -725,6 +730,11 @@ definitions:
         format: string
       Description:
         type: string
+      Frame:
+        $ref: '#/definitions/models.Frame'
+      FrameID:
+        type: integer
+        format: int32
       ID:
         type: integer
         format: int32

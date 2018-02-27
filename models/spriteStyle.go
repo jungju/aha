@@ -12,6 +12,8 @@ type SpriteStyle struct {
 	Name        string    `description:""`
 	Description string    `description:""`
 	UID         string    `description:""`
+	FrameID     uint      `description:""`
+	Frame       Frame     `description:""`
 	SpriteID    uint      `description:""`
 }
 

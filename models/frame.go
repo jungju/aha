@@ -12,6 +12,8 @@ type Frame struct {
 	Name         string        `description:""`
 	Description  string        `description:""`
 	UID          string        `description:""`
+	SceneID      uint          `description:""`
+	Scene        Scene         `description:""`
 	StartType    string        `description:""`
 	SpriteStyles []SpriteStyle `description:""`
 }
@@ -30,14 +32,19 @@ func GetFrameByID(id uint) (frame *Frame, err error) {
 	frame = &Frame{
 		ID: id,
 	}
-	err = NewFrameQuerySet(gGormDB).One(frame)
+
+	preloadDB := gGormDB.Preload("SpriteStyles")
+
+	err = NewFrameQuerySet(preloadDB).One(frame)
 	return
 }
 
 // GetAllframe retrieves all frame matches certain condition. Returns empty list if
 // no records exist
 func GetAllFrame(queryPage *QueryPage) (frames []Frame, err error) {
-	err = NewFrameQuerySet(gGormDB).All(&frames)
+	preloadDB := gGormDB.Preload("SpriteStyles")
+
+	err = NewFrameQuerySet(preloadDB).All(&frames)
 	return
 }
 

@@ -10,7 +10,7 @@ import (
 
 //  StoryController operations for Story
 type StoryController struct {
-	UserBaseController
+	BaseController
 }
 
 // Post ...

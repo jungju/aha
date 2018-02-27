@@ -30,14 +30,24 @@ func GetStoryByID(id uint) (story *Story, err error) {
 	story = &Story{
 		ID: id,
 	}
-	err = NewStoryQuerySet(gGormDB).One(story)
+
+	preloadDB := gGormDB.Preload("Scenes").
+		Preload("Scenes.Frames")
+
+	err = NewStoryQuerySet(preloadDB).
+		One(story)
 	return
 }
 
 // GetAllstory retrieves all story matches certain condition. Returns empty list if
 // no records exist
 func GetAllStory(queryPage *QueryPage) (storys []Story, err error) {
-	err = NewStoryQuerySet(gGormDB).All(&storys)
+	preloadDB := gGormDB.Preload("Scenes").
+		Preload("Scenes.Frames").
+		Preload("Scenes.Frames.SpriteStyles")
+
+	err = NewStoryQuerySet(preloadDB).
+		All(&storys)
 	return
 }
 

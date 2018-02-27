@@ -31,14 +31,19 @@ func GetSceneByID(id uint) (scene *Scene, err error) {
 	scene = &Scene{
 		ID: id,
 	}
-	err = NewSceneQuerySet(gGormDB).One(scene)
+
+	preloadDB := gGormDB.Preload("Frame")
+
+	err = NewSceneQuerySet(preloadDB).One(scene)
 	return
 }
 
 // GetAllscene retrieves all scene matches certain condition. Returns empty list if
 // no records exist
 func GetAllScene(queryPage *QueryPage) (scenes []Scene, err error) {
-	err = NewSceneQuerySet(gGormDB).All(&scenes)
+	preloadDB := gGormDB.Preload("Frame")
+
+	err = NewSceneQuerySet(preloadDB).All(&scenes)
 	return
 }
 
