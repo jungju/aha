@@ -32,7 +32,8 @@ func GetStoryByID(id uint) (story *Story, err error) {
 	}
 
 	preloadDB := gGormDB.Preload("Scenes").
-		Preload("Scenes.Frames")
+		Preload("Scenes.Frames").
+		Preload("Scenes.Frames.SpriteStyles")
 
 	err = NewStoryQuerySet(preloadDB).
 		One(story)

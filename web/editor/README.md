@@ -1,71 +1,117 @@
-# Phaser + ES6 + Webpack.
-#### A bootstrap project to create games with Phaser + ES6 + Webpack.
+# whitestorm-app-boilerplate
+[WIP] WhitestormJS 2 App boilerplate
 
-![Phaser+ES6+Webpack](https://raw.githubusercontent.com/lean/phaser-es6-webpack/master/assets/images/phaser-es6-webpack.jpg)
+[![Build Status][travis]][travis-url]
+[![deps][deps]][deps-url]
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Discord][discord]][discord-url]
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[travis]: https://img.shields.io/travis/WhitestormJS/whitestorm-app-boilerplate.svg?style=flat-square
+[travis-url]: https://travis-ci.org/WhitestormJS/whitestorm-app-boilerplate
+[deps]: https://img.shields.io/david/whitestormjs/whitestorm-app-boilerplate.svg
+[deps-url]: https://david-dm.org/whitestormjs/whitestorm-app-boilerplate
+[discord]: https://discordapp.com/api/guilds/238405369859145729/widget.png
+[discord-url]: https://discord.gg/frNetGE
 
-
-## Features
-- ESLINT with JavaScript Standard Style configuration
-- Next generation of Javascript
-- Browsers are automatically updated as you change project files
-- Webpack ready
-- WebFont Loader
-
-## Typescript 
-If you need typescript support checkout the ```typescript``` branch. Thanks to @MatsMaker
-
-# Setup
-To use this bootstrap you’ll need to install a few things before you have a working copy of the project.
-
-## 1. Clone this repo:
-
-Navigate into your workspace directory.
-
-Run:
-
-```git clone https://github.com/lean/phaser-es6-webpack.git```
-
-## 2. Install node.js and npm:
-
-https://nodejs.org/en/
+<a href="http://whs-boilerplate-app.surge.sh/"><img src="http://i.giphy.com/26xByvPQnomT4eANy.gif" width="100%" height="100%"/></a>
 
 
-## 3. Install dependencies (optionally you could install [yarn](https://yarnpkg.com/)):
+## `app.js`
 
-Navigate to the cloned repo’s directory.
+```javascript
+// Core
+import {App} from '@whs/core/App';
 
-Run:
+import {
+  ElementModule,
+  SceneModule,
+  CameraModule,
+  RenderingModule
+} from '@whs:app';
 
-```npm install``` 
+import {OrbitModule} from '@whs:controls/orbit';
 
-or if you choose yarn, just run ```yarn```
+import {FancyMaterialModule} from './modules/FancyMaterialModule';
 
-## 4. Run the development server:
+// Components
+import {Plane} from '@whs+meshes/Plane';
+import {BasicComponent} from './components/BasicComponent';
 
-Run:
+const app = new App([
+  new ElementModule({
+    container: document.getElementById('app')
+  }),
+  new SceneModule(),
+  new CameraModule({
+    position: {
+      z: -15
+    }
+  }),
+  new RenderingModule({bgColor: 0x000001}),
+  new OrbitModule()
+]);
 
-```npm run dev```
+app.add(new BasicComponent({
+  modules: [
+    new FancyMaterialModule(app)
+  ]
+}));
 
-This will run a server so you can run the game in a browser.
+app.start();
+```
 
-Open your browser and enter localhost:3000 into the address bar.
+## `./components/BasicComponent.js`
 
-Also this will start a watch process, so you can change the source and the process will recompile and refresh the browser
+```javascript
+import {
+  Mesh,
+  IcosahedronGeometry,
+  MeshBasicMaterial
+} from '@whs^three';
 
+import {MeshComponent} from '@whs/core/MeshComponent';
 
-## Build for deployment:
+export class BasicComponent extends MeshComponent {
+  build() {
+    return new Mesh(
+      new IcosahedronGeometry(3, 5),
+      this.applyBridge({
+        material: new MeshBasicMaterial({color: 0xffffff})
+      }).material
+    )
+  }
+}
+```
 
-Run:
+## `./modules/FancyMaterialModule.js`
 
-```npm run deploy```
+```javascript
+import {ShaderMaterial} from '@whs^three';
+import {Loop} from '@whs/core/Loop';
+import glsl from 'glslify';
 
-This will optimize and minimize the compiled bundle.
+import vertex from './vertex.glsl';
+import fragment from './fragment.glsl';
 
-## Credits
-Big thanks to this great repos:
+export class FancyMaterialModule {
+  constructor(app) {
+    this.bridge = {
+      material() {
+        const material = new ShaderMaterial({
+          uniforms: {
+            time: {value: 1.0}
+          },
+          vertexShader: vertex,
+          fragmentShader: fragment
+        });
 
-https://github.com/belohlavek/phaser-es6-boilerplate
+        new Loop(c => {
+          material.uniforms.time.value += c.getDelta();
+        }).start(app);
 
-https://github.com/cstuncsik/phaser-es6-demo
+        return material;
+      }
+    }
+  }
+}
+```

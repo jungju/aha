@@ -3,9 +3,11 @@ package controllers
 import (
 	"net/http"
 
+	"github.com/jinzhu/copier"
 	"github.com/jinzhu/gorm"
 	"github.com/jungju/aha/models"
 	"github.com/jungju/aha/requests"
+	"github.com/jungju/aha/responses"
 )
 
 //  StoryController operations for Story
@@ -70,7 +72,7 @@ func (c *StoryController) GetOne() {
 		c.ErrorAbort(500, err)
 	}
 
-	c.Success(http.StatusOK, story)
+	c.Success(http.StatusOK, convStoryResponse(story))
 }
 
 // GetAll ...
@@ -99,7 +101,13 @@ func (c *StoryController) GetAll() {
 		c.ErrorAbort(500, err)
 	}
 
-	c.Success(http.StatusOK, storys)
+	responsesStorys := []*responses.Story{}
+	for _, story := range storys {
+		cp := story
+		responsesStorys = append(responsesStorys, convStoryResponse(&cp))
+	}
+
+	c.Success(http.StatusOK, responsesStorys)
 }
 
 // Put ...
@@ -169,4 +177,10 @@ func (c *StoryController) Delete() {
 	}
 
 	c.Success(http.StatusNoContent, nil)
+}
+
+func convStoryResponse(story *models.Story) *responses.Story {
+	responseStory := &responses.Story{}
+	copier.Copy(responseStory, story)
+	return responseStory
 }
