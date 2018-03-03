@@ -36,7 +36,7 @@ const app = new WHS.App([
       }
     }
   }, {shadow: true}),
-  //new WHS.OrbitControlsModule(),
+  new WHS.OrbitControlsModule(),
   new WHS.ResizeModule()
 ]);
 
@@ -111,22 +111,22 @@ const s4 = new WHS.Sphere({
 // particle.addTo(app);
 
 
-const bc = new BasicComponent({
-  modules: [
-    new FancyMaterialModule(app)
-  ],
-  position: [130, 40, 0]
-}).addTo(app);
+// const bc = new BasicComponent({
+//   modules: [
+//     new FancyMaterialModule(app)
+//   ],
+//   position: [130, 40, 0]
+// }).addTo(app);
 
-new BasicComponent({
-  modules: [
-    new FancyMaterialModule(app)
-  ],
-  position: [-130, 40, 0]
-}).addTo(app);
+// new BasicComponent({
+//   modules: [
+//     new FancyMaterialModule(app)
+//   ],
+//   position: [-130, 40, 0]
+// }).addTo(app);
 
 new SpriteComponent({
-  position: [60, 40, 0]
+  //position: [60, 40, 0]
 }).mesh.addTo(app);
 
 // const bc2 = new BasicComponent2({

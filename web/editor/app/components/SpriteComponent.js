@@ -11,6 +11,7 @@ export  class SpriteComponent {
         this.spriteTitle = new SpriteTitleComponent(this);
         this.spriteDescription = new SpriteDescriptionComponent(this);
 
-        return { 'mesh': new WHS.Group(this.spriteBox, this.spriteTitle, this.spriteDescription), 'component': this };
+        //return { 'mesh': new WHS.Group(this.spriteBox, this.spriteTitle, this.spriteDescription), 'component': this };
+        return { 'mesh': this.spriteTitle, 'component': this };
     }
 }
