@@ -1,53 +1,17 @@
 <template lang="pug">
     .content-page.login-page
-        .con_allwrp
-            .con_subwrp
-                .con_comwrp
-                    p.log_logo.pc_only
-                        img(src='./image/zv_logo_roof.png')
-                    .con_com.con_left
-                        .content-wrap
-                            form.form-login(v-on:keydown='loginEnter')
-                                input.inputbox(type='text', placeholder='아이디', v-model='loginForm.username')
-                                input.inputbox(type='password', placeholder='비밀번호', v-model='loginForm.password')
-                                .butwrp
-                                    button#login-btn(form='form-contact', value='로그인', style='margin:10px;', v-loading='loading', v-on:click='login', v-bind:disabled='loading')
-                                        p 로그인
-                                span.error-msg(v-show="hasError") 아이디나 비밀번호가 틀렸습니다.
 </template>
 
 <script>
-    import {
-        UserAuthController_Login,
-        UserController_Me
-    } from '~/makezip'
-    
     export default {
         data() {
             return {
-                loginForm: {
-                    username: "",
-                    password: "",
-                },
-                loading: false,
-                hasError: false,
+                
             };
         },
         methods: {
             login() {
-                this.loading = true;
-                UserAuthController_Login({
-                    body: {
-                        Username: this.loginForm.username,
-                        Password: this.loginForm.password
-                    }
-                }).then((response) => {
-                    this.$Func.setToken(response.data.Token);
-                    location.href = "/";
-                }).catch((error) => {
-                    this.loading = false;
-                    this.hasError = true;
-                });
+                
             },
             loginEnter(e) {
                 if (e.keyCode == 13 || e.which == 13) {
@@ -151,10 +115,6 @@
         color: #fff;
     }
     
-    #olim-id {
-        margin-top: 10px;
-    }
-    
     .login-page .inputbox {
         width: 100%;
         height: 43px;
@@ -169,14 +129,6 @@
     
     .con_sright {
         padding-left: 20px;
-    }
-    
-    .olim_logo {
-        width: 91px;
-        height: auto;
-        position: absolute;
-        right: 10px;
-        bottom: 30px;
     }
     
     .con_allwrp {

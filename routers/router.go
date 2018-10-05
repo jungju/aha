@@ -1,7 +1,7 @@
 // @APIVersion 1.0.0
 // @Title aha API
-// @Description 집뷰CRM API
-// @Contact maximus@olimplanet.com
+// @Description AHACRM API
+// @Contact leejungju.go@gmail.com
 // @TermsOfServiceUrl http://aha.com
 // @License Private
 // @SecurityDefinition userAPIKey apiKey X-USER-AUTH-TOKEN header "I love auto-generated docs

@@ -39,7 +39,7 @@ func Req(method string, url string, body interface{}, token string, model interf
 	client := &http.Client{}
 	w, err := client.Do(r)
 	if err != nil {
-		beego.Error("집뷰CRM 요청 실패", err)
+		beego.Error("AHACRM 요청 실패", err)
 		return -1, err
 	}
 	if w.StatusCode >= 200 && w.StatusCode <= 400 {
@@ -52,7 +52,7 @@ func Req(method string, url string, body interface{}, token string, model interf
 		}
 	}
 
-	beego.Info("집뷰CRM 요청 성공. 상태 : ", method, url, w.StatusCode)
+	beego.Info("AHACRM 요청 성공. 상태 : ", method, url, w.StatusCode)
 	return w.StatusCode, nil
 }
 

@@ -1,5 +1,5 @@
 export default {
-  siteName:'마이집뷰',
-  minSiteMame:'My Zipview',
+  siteName:'Aha',
+  minSiteMame:'aha',
   tokenKey: 'Authorization',
 }

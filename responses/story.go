@@ -11,6 +11,7 @@ type Story struct {
 	Description string    `json:"description"`
 	UID         string    `json:"uid"`
 	Scenes      []Scene   `json:"scenes"`
+	Sprites     []Sprite  `json:"sprites"`
 }
 
 // graffiti: json
@@ -45,7 +46,7 @@ type SpriteStyle struct {
 	Name        string    `json:"name"`
 	Description string    `json:"description"`
 	UID         string    `json:"uid"`
-	SpriteD     Sprite    `json:"sprited"`
+	SpriteUID   string    `json:"spriteuid"`
 }
 
 // graffiti: json

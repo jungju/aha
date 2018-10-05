@@ -25,7 +25,7 @@ export const request = (method, url, body, queryParameters, form, config) => {
   }
 }
 /*==========================================================
- *                    집뷰CRM API
+ *                    AHACRM API
  ==========================================================*/
 /**
  * get Frame

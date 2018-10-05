@@ -1,5 +1,3 @@
-import {UserController_Me} from '../makezip'
-
 export const commonMixin = {
 	data() {
 		return {
@@ -7,7 +5,6 @@ export const commonMixin = {
 		};
 	},
 	created: function() {
-		this.getMe();
 	},
 	methods: {
 		failMessageOnlyOK(message) {
@@ -47,16 +44,6 @@ export const commonMixin = {
 				cancelButtonText: '취소',
 				center: true
 			}).then(cb).catch(errcb);
-		},
-		getMe() {
-			this.$Func.requestMakezipAPI(UserController_Me,{},(response) => {
-				this.user = response.data;
-				if(!this.user.IsConfirmed) {
-					location.href = "https://zipview.kr/login-notice.html"
-				}
-      },(error) => {
-				location.href = '.';
-      })
 		}
 	}
 }

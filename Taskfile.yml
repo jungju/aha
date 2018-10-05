@@ -9,7 +9,7 @@ dev:
     DB_HOST: 127.0.0.1
     DB_NAME: aha
     DB_USER: root
-    DB_PASS: olim
+    DB_PASS: password
 
 dev-www:
   cmds:
@@ -28,7 +28,7 @@ server:
     - bee run -downdoc=true -gendoc=true -tags 'bindatafs'
   env:
     PRODENV: test
-    SECRET_KEY: superolim
+    SECRET_KEY: superkey
     DB_HOST: 127.0.0.1
     DB_NAME: aha
     DB_USER: root
@@ -50,4 +50,4 @@ dockerpush:
 
 devtool:
   cmds:
-    - cat dev.script | machma -p 2 -- sh -c $1 {}
+    - cat dev.script | machma -p 10 --timeout 0s -- sh -c $1 {}

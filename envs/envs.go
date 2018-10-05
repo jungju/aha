@@ -17,7 +17,7 @@ const (
 	defaultServicePort    = "8081"
 	UserTokenHeaderName   = "X-USER-AUTH-TOKEN"
 	DeviceTokenHeaderName = "X-DEVICE-TOKEN"
-	secretKey             = "supersecret##olim"
+	secretKey             = "supersecret##key"
 	TestUsername          = "dododo"
 	TestUserPassword      = "1133234"
 )

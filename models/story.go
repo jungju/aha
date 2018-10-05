@@ -7,7 +7,7 @@ import (
 // gen:qs
 type Story struct {
 	ID          uint          `description:""`
-	CreatedAt   time.Time     `description:""`
+	CreatedAt   time.Time     `description:""  gorm:"default: NOW();"`
 	UpdatedAt   time.Time     `description:""`
 	Name        string        `description:""`
 	Description string        `description:""`
